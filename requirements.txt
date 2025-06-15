@@ -2,9 +2,7 @@ numpy
 pandas
 matplotlib
 tensorflow>=2.19.0
-tensorflow_probability
-tf-keras
-ipython
+
 jax
 scipy
 tqdm
@@ -13,4 +11,6 @@ sortedcontainers
 psutil
 numba
 blosc
-pywin32
+ipython
+tf-keras
+pywin32; platform_system=="Windows"
