@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+tensorflow==2.13.0
+tensorflow_probability
+jax
+scipy
+tqdm
+jsonpickle
+sortedcontainers
+psutil
+numba
+blosc
+pywin32
