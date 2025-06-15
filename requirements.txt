@@ -1,7 +1,7 @@
 numpy
 pandas
 matplotlib
-tensorflow==2.13.0
+tensorflow==2.19.0
 tensorflow_probability
 jax
 scipy
@@ -11,4 +11,3 @@ sortedcontainers
 psutil
 numba
 blosc
-pywin32

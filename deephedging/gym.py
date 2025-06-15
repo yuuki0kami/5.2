@@ -47,15 +47,16 @@ class VanillaDeepHedgingGym(tf.keras.Model):
                 Type
         """
         tf.keras.Model.__init__(self, name=name, dtype=dtype )
-        seed                       = config.tensorflow("seed", 423423423, int, "Set tensor random seed. Leave to None if not desired.")
-        self.softclip              = DHSoftClip( config.environment )
-        self.config_agent          = config.agent.detach()
-        self.config_objective      = config.objective.detach()
-        self.user_version          = config("user_version", None, help="An arbitrary string which can be used to identify a particular gym. Changing this value will generate a new cache key")
-        self.agent                 = None
-        self.utility               = None
-        self.utility0              = None
-        self.unique_id             = config.unique_id()  # for serialization
+        seed = config.tensorflow("seed", 423423423, int, "Set tensor random seed. Leave to None if not desired.")
+        # Avoid Keras tracking of non-tensor attributes
+        object.__setattr__(self, "softclip", DHSoftClip(config.environment))
+        object.__setattr__(self, "config_agent", config.agent.detach())
+        object.__setattr__(self, "config_objective", config.objective.detach())
+        object.__setattr__(self, "user_version", config("user_version", None, help="An arbitrary string which can be used to identify a particular gym. Changing this value will generate a new cache key"))
+        object.__setattr__(self, "agent", None)
+        object.__setattr__(self, "utility", None)
+        object.__setattr__(self, "utility0", None)
+        object.__setattr__(self, "unique_id", config.unique_id())  # for serialization
         config.done()
         
         if not seed is None:
