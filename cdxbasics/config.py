@@ -6,7 +6,7 @@ Hans Buehler 2022
 
 from collections import OrderedDict
 from collections.abc import Mapping
-from sortedcontainers import SortedDict
+from .sorted_dict import SortedDict
 from .util import uniqueHashExt, fmt_list
 from .prettydict import PrettyDict as pdct
 from .logger import Logger

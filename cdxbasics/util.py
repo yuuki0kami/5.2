@@ -13,7 +13,7 @@ from collections.abc import Mapping, Collection, Sequence
 from .prettydict import PrettyDict, OrderedDict
 import sys as sys
 import time as time
-from sortedcontainers import SortedDict
+from .sorted_dict import SortedDict
 from collections.abc import Mapping, Collection
 
 # support for numpy and pandas is optional for this module

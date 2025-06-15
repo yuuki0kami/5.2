@@ -5,7 +5,7 @@ Hans Buehler 2022
 """
 
 from collections import OrderedDict
-from sortedcontainers import SortedDict
+from .sorted_dict import SortedDict
 from dataclasses import Field
 import types as types
 from collections.abc import Mapping, Collection
