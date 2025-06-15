@@ -2,7 +2,7 @@ numpy
 pandas
 matplotlib
 tensorflow>=2.19.0
-tensorflow_probability[tf]
+
 jax
 scipy
 tqdm
